@@ -53,6 +53,54 @@ function generatePassword() {
   }
 
   // 6. generate the password based on the user's input
+  // we have the length of the number of chars needed.
+  // we have the value indicating if the user wants uppercase chars
+  // we have the value indicating if the user wants lowercase chars
+  // we have the value indicating if the user wants numbers
+  // we have the value indicating if the user wants special chars
+
+  // first off, we should provide lists of all the valid characters that we can
+  // use.
+
+  var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+  var numericChars = "0123456789";
+  var specialChars = "!@#$%^&*()_+~`|}{[]\:;?><,./-=";
+
+  var validChars = "";
+
+
+  // next, let's review what the user wanted in their password.
+  if(includeLowercase) {
+    // add the lowercase characters to the valid list of characters
+    validChars = validChars + lowercaseChars;
+  }
+
+  if(includeUppercase) {
+    // add the uppercase characters to the valid list of characters
+    validChars += uppercaseChars; // same as validChars = validChars + uppercaseChars;
+  }
+
+  if(includeNumbers) { 
+    // add the numeric characters to the valid list of characters
+    validChars += numericChars;
+  }
+
+  if(includeSpecialChars) {
+    // add the special characters to the valid list of characters
+    validChars += specialChars;
+  }
+
+  // and store them in a variable that will store all the valid characters we can use.
+
+  window.alert("your choice of characters appears to be :" + validChars);
+
+  // check to see if the variable storing the valid list of characters is not empty.
+  // if it is, alert the user that they did not choose correctly, and to try again.
+
+  // using the final valid list of characters, we will generate a random password
+  // based on the length or number of characters that the user wants (loop)
+
 
   // 7. we will return the password at the end of the function
 
