@@ -28,6 +28,12 @@ function generatePassword() {
   }
 
   // 3. ask the user if they want to include uppercase letters
+  var includeUppercase = window.confirm("Click OK to confirm including uppercase characters.");
+  if(includeUppercase) {
+    window.alert("You chose to include uppercase characters.");
+  } else {
+    window.alert("You chose not to include uppercase characters.");
+  }
 
   // 4. ask the user if they want to include numbers
 
