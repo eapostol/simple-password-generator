@@ -12,7 +12,20 @@ function generatePassword() {
   // 1. ask the user for the length of the password (between 8 and 128 characters)
   var passwordLength = window.prompt("How many characters would you like your password to contain (min. 8 chars, max. 128)?");
   window.alert("You chose " + passwordLength + " characters.");
+
+  // add a check to see if the user entered a valid password length 
+  // (i.e. between 8 and 128 characters)
+
   // 2. ask the user if they want to include lowercase letters
+  // use a confirm box to ask the user if they want to include lowercase letters
+  // a confirm box simply displays an OK or cancel button. OK returns true, cancel returns false
+  // true means yes, false means no
+  var includeLowercase = window.confirm("Click OK to confirm including lowercase characters.");
+  if(includeLowercase) {
+    window.alert("You chose to include lowercase characters.");
+  } else {
+    window.alert("You chose not to include lowercase characters.");
+  }
 
   // 3. ask the user if they want to include uppercase letters
 
