@@ -36,9 +36,21 @@ function generatePassword() {
   }
 
   // 4. ask the user if they want to include numbers
+  var includeNumbers = window.confirm("Click OK to confirm including numeric characters.");
+  if(includeNumbers) {
+    window.alert("You chose to include numbers.");
+  } else {
+    window.alert("You chose not to include numbers");
+  }
 
   // 5. ask the user if they want to include special chararacters
   // https://owasp.org/www-community/password-special-characters
+  var includeSpecialChars = window.confirm("Click OK to confirm including special characters.");
+  if(includeSpecialChars) {
+    window.alert("You chose to include special characters.");
+  } else {
+    window.alert("You chose not to include special characters");
+  }
 
   // 6. generate the password based on the user's input
 
